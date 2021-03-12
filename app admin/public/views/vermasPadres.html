@@ -1,0 +1,69 @@
+<md-dialog aria-label="Información Padres" class="formulario_vermas">
+  <div layout="column">
+  <md-content >
+  <h3>DATOS PERSONALES</h3>
+     <md-divider ></md-divider>
+   <img ng-src="{{seleccion.foto}}" id="avatar" class="img-circle" alt="Foto">
+   <md-divider ></md-divider>
+
+<!--
+<form enctype="multipart/form-data" class="formoid-solid-blue" style="background-color:#FFFFFF;font-size:14px;font-family:'Roboto',Arial,Helvetica,sans-serif;color:#34495E;min-width:100px;max-width:300px; text-align:left;" method="post" action="http://localhost:8080/subirFoto">
+<div class="element-file" title="Foto"><div class="item-cont"><label class="large" ><input type="file" class="file_input" name="image" required="required"/><div class="file_text">Seleccionar Foto</div><span class="icon-place"></span></label> <input type="submit" value="Cargar" class="button" ng-click="CambiarFoto()"></div>
+  </div>
+</form>
+-->
+  <table class="table table-bordered">
+    <thead>
+    </thead>
+    <tbody>
+        <tr >
+            <td class="active">ID</td>
+            <td class="info">{{ seleccion._id }}</td>
+        </tr>
+        <tr>
+            <td class="active">NOMBRE COMPLETO</td>
+            <td class="info">{{seleccion.primer_nombre}} {{ seleccion.segundo_nombre}} {{seleccion.primer_apellido}} {{ seleccion.segundo_apellido}}</td>
+        </tr>
+        <tr>
+            <td class="active"> FECHA NACIMIENTO</td>
+            <td class="info">{{seleccion.f_nacimiento |  date : format : shortDate }}</td>
+        </tr>
+        <tr >
+            <td class="active">TIPO DE SANGRE (RH)</td>
+            <td class="info">{{seleccion.rh }}</td>
+        </tr>
+        <tr >
+            <td class="active">TELEFONO</td>
+            <td class="info">{{seleccion.telefono}} </td>
+        </tr>
+        <tr>
+            <td class="active">CELULAR</td>
+            <td class="info">{{seleccion.celular}} </td>
+        </tr>
+        <tr>
+            <td class="active">OCUPACIÓN</td>
+            <td class="info"> {{seleccion.ocupacion}} </td>
+        </tr>
+        <tr>
+            <td class="active">DIRECCIÓN DE TRABAJO</td>
+            <td class="info"> {{seleccion.direccion_trabajo}} </td>
+        </tr>
+        <tr>
+            <td class="active"> TELEFONO DE TRABAJO</td>
+            <td class="info"> {{seleccion.telefono_trabajo}} </td>
+        </tr>
+      <tr>
+            <td class="active">EMAIL</td>
+            <td class="info"> {{seleccion.email}} </td>
+        </tr>
+    </tbody>
+</table>   
+  </md-content>
+</div>
+<div class="md-actions" layout="row">
+  <span flex></span>
+  <md-button ng-click="respuesta (user)" class="md-primary"> Cerrar </md-button>
+  </div>
+</md-dialog>
+
+

@@ -1,0 +1,76 @@
+<md-dialog aria-label="Registrar" id="CuerpoModalRutas" ng-class="md-whiteframe-z1">
+  <div layout="column" class="inputdemoIcons" ng-controller="GestionarRutasCtrl">
+  <br>
+  <md-content>
+    <div flex="90" class="center" ng-hide="false">
+<div layout="row">
+  <md-label>Vehiculo</md-label>
+<md-select ng-model="NuevaRuta.id_vehiculo" ng-click="CargarVehiculos()" placeholder="Vehiculo">
+<md-option ng-repeat="vehi in vehiculos" ng-click="CargarConductores()" value="{{vehi._id}}">{{vehi._id}}</md-option>
+</md-select>
+
+<md-label>Conductor</md-label>
+<md-select ng-model="NuevaRuta.id_conductor" placeholder="Conductor">
+<md-option ng-repeat="cond in conductores" ng-click="CargarEstudiantes()" value="{{cond._id}}">{{cond._id}}</md-option>
+</md-select>
+</div>
+<br>
+<md-divider></md-divider>
+ <h3 class="center">Pasajeros de Ruta</h3>
+<div layout="row">
+  <table >
+                <thead>
+                  <tr>
+                    <td class="center">Id</td>
+                    <td class="center">Nombre Completo</td>
+                    <td class="center" >F. Nacimiento</td>
+                    <td class="center">Dirección Residencia</td>
+                    <td class="center">Latitud</td>
+                    <td class="center">Longitud</td>
+                    <td></td>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+<tr ng-repeat="listaP in listaPasajeros">
+<td>{{ listaP._id }} </td>  
+<td>{{ listaP.primer_nombre}} {{ listaP.segundo_nombre}} {{ listaP.primer_apellido}} {{ listaP.segundo_apellido}} </td> 
+<td>{{ listaP.f_nacimiento}} </td> 
+<td>Direccion </td> 
+<td>{{ listaP.latitud_hogar }} </td> 
+<td>{{ listaP.longitud_hogar }} </td> 
+<td> <md-switch ng-model="listaP.asignado" aria-label="Asignar" ng-click="AgregarPasajeroArray(listaP)">
+    Asignar
+  </md-switch>
+  </td>
+                </tr>
+                </tbody>
+              </table>
+
+</div>
+   <br>
+<md-divider></md-divider>
+
+   <md-button class="md-primary md-hue-2 md-icon-button center " id="guardar" ng-click="Limpiar()"aria-label="Limpiar">
+  <md-icon md-svg-icon="images/undo.svg"></md-icon>
+<md-tooltip md-visible="demo4.showTooltip">
+               Limpiar
+              </md-tooltip>
+  </md-button>
+   <md-button class="md-primary md-hue-2 md-icon-button right" id="guardar" ng-click="GuardarRuta(NuevaRuta)"aria-label="Guardar">
+  <md-icon md-svg-icon="images/save.svg"></md-icon>
+<md-tooltip md-visible="demo4.showTooltip">
+               Guardar
+              </md-tooltip>
+  </md-button>
+
+  </div>
+  </md-content>
+</div>
+
+<div class="md-actions" layout="row">
+  <span flex></span>
+  <md-button ng-click="respuesta ('cancelar')" class="md-primary"> Cerrar </md-button>
+  </div>
+</md-dialog>

@@ -1,0 +1,14 @@
+<md-dialog aria-label="Datos de Usuario">
+  <div layout="column" class="inputdemoIcons" >
+  <br>
+  <md-content layout-padding="" class="autoScroll">
+    Si desea consultar los datos personales del usuario : {{ seleccion._id }}, sera 
+    redirigido a la sección correspondiente.
+  </md-content>
+</div>
+<div class="md-actions" layout="row">
+  <span flex></span>
+  <md-button ng-click="respuesta ('cancelar')" class="md-primary"> Cancelar</md-button>
+  <md-button ng-click="respuesta (seleccion)" class="md-primary"> Aceptar </md-button>
+  </div>
+</md-dialog>

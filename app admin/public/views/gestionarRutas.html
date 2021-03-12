@@ -1,0 +1,57 @@
+<div layout="row" id="ContenedorGestionarRutas" layout-wrap>
+
+  <md-divider></md-divider>
+
+  <div>
+<div layout="row">
+<div class="Tcontainer">
+  <table >
+                <thead>
+                  <tr>
+                    <th>Vehiculo</th>
+                    <th>Conductor</th>
+                    <th>Estado</th>
+                     <th>Pasajeros</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+<tr data-ng-repeat="listaR in listaRutas |  filter:{tipousuario: 'administrador'}| filter:buscador" >
+<td class="dprincipal">{{ listaR.id_vehiculo }} </td>  
+<td>{{ listaR.id_conductor}} </td> 
+<td> {{ listaR.estado }}</td> 
+<td> <md-button ng-click="VerPasajeros($event, listaR.estudiantes)" class="md-icon-button" aria-label="Ver Pasajeros">
+          <md-icon md-svg-icon="images/users.svg" ></md-icon>
+          <md-tooltip md-visible="demo1.showTooltip">
+               Ver
+              </md-tooltip>
+         </md-button></td> 
+<td><md-button ng-click="Editar($event, listaR)" class="md-icon-button" aria-label="Editar">
+          <md-icon md-svg-icon="images/underline6.svg" ></md-icon>
+          <md-tooltip md-visible="demo2.showTooltip">
+               Editar
+              </md-tooltip>
+                </md-button>
+                    <md-button ng-click="EliminarRuta(listaR , listaR.estudiantes)" class="md-icon-button" aria-label="Eliminar">
+          <md-icon md-svg-icon="images/clear5.svg" ></md-icon>
+          <md-tooltip md-visible="demo3.showTooltip">
+               Eliminar
+              </md-tooltip>
+                </md-button></td>
+                </tr>
+                </tbody>
+              </table>
+              <br>
+              </div>
+</div>
+       <md-button class="md-primary md-hue-2 md-icon-button right" id="guardar" ng-click="Nuevo($event)"aria-label="Guardar">
+  <md-icon md-svg-icon="images/add182.svg"></md-icon>
+<md-tooltip md-visible="demo4.showTooltip">
+              Nuevo
+              </md-tooltip>
+  </md-button>
+  </div>
+
+  </div>
+</div>

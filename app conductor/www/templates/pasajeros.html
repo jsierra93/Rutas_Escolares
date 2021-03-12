@@ -1,0 +1,31 @@
+ <ion-view view-title="Pasajeros">
+  <ion-content>
+   <div class="list">
+
+  <div class="item item-divider">
+    Pasajeros Activos
+  </div>
+ <a ng-repeat="p in Pasajeros | filter: 'activo':true" class="item item-avatar" href="#">
+      <img src="http://130.211.180.114/{{p.foto}}">
+      <h2>{{ p.primer_nombre }} {{p.primer_apellido}} {{p.segundo_apellido}}</h2>
+      <p>{{p._id}} </p>
+      <span class="item-note">
+      {{p.direccion}}
+    </span>
+    </a>
+    
+  <div class="item item-divider">
+    Pasajeros Inactivos
+  </div>
+
+ <a ng-repeat="p in Pasajeros | filter: 'inactivo':true" class="item item-avatar" href="#">
+      <img src="http://130.211.180.114/{{p.foto}}">
+      <h2>{{ p.primer_nombre }} {{p.primer_apellido}} {{p.segundo_apellido}}</h2>
+      <p>{{p._id}} </p>
+      <span class="item-note">
+      {{p.direccion}}
+    </span>
+    </a>
+</div>
+  </ion-content>
+</ion-view>

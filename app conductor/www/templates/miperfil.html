@@ -1,0 +1,56 @@
+<ion-view view-title="Mi perfil">
+  <ion-content><div class="item item-image">
+    <img class="fvehiculo" src="{{Dconductor.foto}}">
+  </div>
+    
+    <div class="item item-divider text-center ">
+    Información Basica
+  </div>
+
+<table class="tabla">
+<tbody>
+<tr class="tfila">
+	<td class="ctabla">IDENTIFICACIÓN</td>
+	<td class="dtabla">{{Dconductor._id}}</td>
+</tr>
+<tr>
+	<td td class="ctabla">NOMBRE COMPLETO</td>
+	<td  class="dtabla">{{Dconductor.primer_nombre}} {{ Dconductor.segundo_nombre}} {{Dconductor.primer_apellido}} {{ Dconductor.segundo_apellido}}</td></td>
+</tr>
+      <tr class="tfila">
+            <td class="ctabla"> FECHA NACIMIENTO</td>
+            <td class="dtabla">{{Dconductor.f_nacimiento |  date : format : shortDate}}</td>
+        </tr>
+        <tr >
+            <td class="ctabla">TIPO DE SANGRE (RH)</td>
+            <td class="dtabla">{{Dconductor.rh }}</td>
+        </tr>
+      <tr class="tfila">
+            <td class="ctabla">TELEFONO</td>
+            <td class="dtabla">{{Dconductor.telefono}} </td>
+        </tr>
+        <tr>
+            <td class="ctabla">CELULAR</td>
+            <td class="dtabla">{{Dconductor.celular}} </td>
+        </tr>
+        <tr class="tfila">
+            <td class="ctabla">N° LICENCIA</td>
+            <td class="dtabla">{{Dconductor.numero_licencia}}</td>
+        </tr>
+        <tr>
+            <td class="ctabla">F. EXPEDICIÓN LICENCIA</td>
+            <td class="dtabla"> {{Dconductor.f_expedicion_doc |  date : format : shortDate}} </td>
+        </tr>
+       <tr class="tfila">
+            <td class="ctabla">F. VENCIMIENTO LICENCIA</td>
+            <td class="dtabla"> {{Dconductor.f_vencimiento_doc |  date : format : shortDate}} </td>
+        </tr>
+        <tr>
+            <td class="ctabla"> ORGANISMO EXPEDIDOR </td>
+            <td class="dtabla"> {{Dconductor.organismo_expedidor}} </td>
+        </tr>
+</tbody>
+</table>
+
+  </ion-content>
+</ion-view>

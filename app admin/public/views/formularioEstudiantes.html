@@ -1,0 +1,166 @@
+<md-dialog aria-label="Registrar"  id="FormularioPadres" class="blurBg-true" style="background-color:#EBEBEB">
+
+<form enctype="multipart/form-data" class="formoid-solid-blue" style="background-color:#FFFFFF;font-size:14px;font-family:'Roboto',Arial,Helvetica,sans-serif;color:#34495E;max-width:520px;min-width:300px" method="post">
+<div class="title"><h2>Registrar Estudiantes</h2></div>
+
+  <div class="element-input" title="ID"><label class="title"><span class="required">*</span></label><div class="item-cont"><input  ng-model="user._id" class="large" type="text" name="input" required="required" placeholder="ID" autofocus/><span class="icon-place"></span></div></div>
+
+  <div class="element-name"><label class="title"><span class="required">*</span></label>
+    <span  class="nameLast"><input ng-model="user.primer_nombre" placeholder=" Primer Nombre" type="text" size="14" name="name1[first]" required="required"/><span class="icon-place"></span></span>
+    
+    <span class="nameLast"><input ng-model="user.segundo_nombre" placeholder=" Segundo Nombre" type="text" size="14" name="name1[last]" required="required"/><span class="icon-place"></span></span>
+  </div>
+
+  <div class="element-name"><label class="title"><span class="required">*</span></label>
+    <span class="nameLast"><input ng-model="user.primer_apellido" placeholder=" Primer Apellido" type="text" size="8" name="name2[first]" required="required"/><span class="icon-place"></span></span>
+
+    <span class="nameLast"><input  ng-model="user.segundo_apellido" placeholder=" Segundo Apellido" type="text" size="14" name="name2[last]" required="required"/><span class="icon-place"></span></span>
+  </div>
+  
+<div class="element-date" title="Fecha Nacimiento"><label class="title"><span class="required">Fecha Nacimiento</span></label><div class="item-cont"><input ng-model="user.f_nacimiento" class="large" data-format="yyyy-mm-dd" type="date" name="date" required="required" placeholder="Fecha Nacimiento"/><span class="icon-place"></span></div>
+  </div>
+
+  <div class="element-select" title="RH"><label class="title"><span class="required">*</span></label><div class="item-cont"><div class="large"><span><md-select ng-model="user.rh" placeholder="Tipo de Sangre" id="susuario" >
+       <md-option  value="A+" >A+</md-option>
+       <md-option  value="A-">A-</md-option>
+       <md-option  value="B+">B+</md-option>
+       <md-option  value="B-">B-</md-option>
+       <md-option  value="O+" >O+</md-option>
+       <md-option  value="O-">O-</md-option>
+       <md-option  value="AB+">AB+</md-option>
+       <md-option  value="AB-">AB-</md-option>
+    </md-select><i></i><span class="icon-place"></span></span></div></div>
+    </div>
+
+  <div class="element-phone" title="Telefono"><label class="title"><span class="required">*</span></label><div class="item-cont"><input ng-model="user.telefono"  class="large" type="tel" pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="phone" required="required" placeholder="Telefono" value=""/><span class="icon-place"></span></div>
+  </div>
+
+  <div class="element-phone" title="Celular"><label class="title"><span class="required">*</span></label><div class="item-cont"><input ng-model="user.celular"  class="large" type="tel" pattern="\d{3}-\d{3}-\d{4}" maxlength="24" name="phone1" required="required" placeholder="XXX-XXX-XXXX" value=""/><span class="icon-place"></span></div>
+  </div>
+
+  <div class="element-email" title="Email"><label class="title"></label><div class="item-cont"><input ng-model="user.email" class="large" type="email" name="email" value="" placeholder="Email"/><span class="icon-place"></span></div>
+  </div>
+
+  <div class="element-input" title="ID Padre"><div class="item-cont"><input  ng-model="user.padres" class="large" type="text" name="input" placeholder="ID Padre" autofocus/><span class="icon-place"></span></div></div>
+
+
+<div class="element-input" title="Latitud Hogar"><div class="item-cont"><input  ng-model="user.latitud_hogar" class="large" type="text" name="input" placeholder="Latitud Hogar" autofocus/><span class="icon-place"></span></div></div>
+
+<div class="element-input" title="Longitud Hogar"><div class="item-cont"><input  ng-model="user.longitud_hogar" class="large" type="text" name="input" placeholder="Longitud Hogar" autofocus/><span class="icon-place"></span></div></div>
+
+<div class="element-input" title="Dirección"><div class="item-cont"><input  ng-model="user.direccion" class="large" type="text" name="input" placeholder="Dirección" autofocus/><span class="icon-place"></span></div></div>
+
+<div class="element-input" title="Grado Cursado"><div class="item-cont"><input  ng-model="user.grado_cursado" class="large" type="text" name="input" placeholder="Grado Cursado" autofocus/><span class="icon-place"></span></div></div>
+
+<div class="element-input" title="Grupo Cursado"><div class="item-cont"><input  ng-model="user.grupo_cursado" class="large" type="text" name="input" placeholder="Grupo Cursado" autofocus/><span class="icon-place"></span></div></div>
+
+
+<div class="element-input" title="Foto"><div class="item-cont"><input  ng-model="user.foto" class="large" type="text" name="input" placeholder="Url Foto" autofocus/><span class="icon-place"></span></div></div>
+
+  <div class="element-file" title="Foto"><label class="title"><span class="required">*</span></label><div class="item-cont"><label class="large" ><div class="button">Cargar</div><input  type="file" class="file_input" name="file" required="required"/><div class="file_text">Seleccionar Foto</div><span class="icon-place"></span></label></div>
+  </div>
+
+<md-divider></md-divider>
+  <div class="" layout="row">
+  <span flex></span>
+    <md-button ng-click="respuesta ('cancelar')" class="md-primary"> Cancelar </md-button>
+    <md-button ng-click="respuesta (user)" class="md-primary"> Enviar </md-button>
+  </div>
+</md-dialog>
+
+
+
+
+<!--
+<md-dialog aria-label="Registrar" id="FormularioPadres">
+  <md-subheader>
+    Registrar Usuario
+  </md-subheader>
+  <div layout="column" class="inputdemoIcons">
+  <br>
+  <md-content>
+    
+    <md-input-container class="md-icon-float">
+      <label>ID</label>
+      <input autofocus ng-model="user._id" type="text" placeholder="ID (required)" class="name">
+    </md-input-container>
+<md-input-container class="md-icon-float">
+      <label>Primer Nombre</label>
+      <input ng-model="user.primer_nombre" type="text" placeholder="Primer Nombre" class="name">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <label>Segundo Nombre</label>
+      <input ng-model="user.segundo_nombre" type="text" placeholder="Segundo Nombre" class="name">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <label>Primer Apellido</label>
+      <input ng-model="user.primer_apellido" type="text" placeholder="Primer Apellido" class="name">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <label>Segundo Apellido</label>
+      <input ng-model="user.segundo_apellido" type="text" placeholder="Segundo Apellido" class="name">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <label>Fecha Nacimiento</label>
+      <input ng-model="user.f_nacimiento" type="date" placeholder="Fecha Nacimiento" class="name">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <label>Fecha Expedición</label>
+      <input ng-model="user.f_expedicion_documento" type="date" placeholder="Fecha Expedicion Documento" class="name">
+    </md-input-container>
+      <md-select placeholder="Tipo de Sangre" ng-model="user.rh">
+       <md-option  value="A+" >A+</md-option>
+       <md-option  value="A-">A-</md-option>
+       <md-option  value="B+">B+</md-option>
+       <md-option  value="B-">B-</md-option>
+       <md-option  value="O+" >O+</md-option>
+       <md-option  value="O-">O-</md-option>
+       <md-option  value="AB+">AB+</md-option>
+        <md-option  value="AB-">AB-</md-option>
+    </md-select>
+    <md-input-container class="md-icon-float">
+      <label>Telefono</label>
+      <input ng-model="user.telefono" type="text" placeholder="Telefono" class="name">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <label>Celular</label>
+      <input ng-model="user.celular" type="text" placeholder="Celular" class="name">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <label>Foto</label>
+      <input ng-model="user.foto" type="file" placeholder="Foto" class="name">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <label>Padres</label>
+      <input ng-model="user.padres" type="text" placeholder="Padres" class="name">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <label>Longitud</label>
+      <input ng-model="user.longitud_hogar" type="text" placeholder="Longitud Hogar" class="name">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <label>Latitud</label>
+      <input ng-model="user.latitud_hogar" type="text" placeholder="Latitud Hogar" class="name">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <label>Grado Cursado</label>
+      <input ng-model="user.grado_cursado" type="text" placeholder="Grado Cursado" class="name">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <label>Grupo Cursado</label>
+      <input ng-model="user.grupo_cursado" type="text" placeholder="Grupo Cursado" class="name">
+    </md-input-container>
+    
+  </md-content>
+</div>
+
+<div class="md-actions" layout="row">
+  <span flex></span>
+  <md-button ng-click="respuesta ('cancelar')" class="md-primary"> Cancelar </md-button>
+  <md-button ng-click="respuesta (user)" class="md-primary"> Enviar </md-button>
+  </div>
+</md-dialog>
+
+-->
+
+

@@ -1,0 +1,172 @@
+<div layout="row" id="ContenedorGestionarRutas" layout-wrap>
+<!--<div class="Dbuscador">
+  <label>Buscar: 
+               <input type="text" placeholder="Buscar" ng-model="buscador" /></label>
+</div>
+-->
+      
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Administradores">
+        <md-content class="md-padding">
+        <div>
+         <div layout="row" class="Tcontainer">
+              <table >
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>CLAVE</th>
+                    <th>TIPO USUARIO</th>
+                    <th class="ttoken">TOKEN</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr tr ng-repeat="listav in listaviews |  filter:{tipousuario: 'administrador'}| filter:buscador" >
+                    <td class="dprincipal">{{ listav._id }} </td>
+                    <td> {{ listav.clave }} </td>
+                    <td> {{ listav.tipousuario }} </td>
+                    <td class="ttoken"> {{ listav.token }} </td>
+                    
+                    <td class="tbotones">
+                    <!--
+                    <md-button ng-click="VerMas($event, listav)" class="md-icon-button" aria-label="Ver Más">
+          <md-icon md-svg-icon="images/add180.svg" ></md-icon>
+          <md-tooltip md-visible="demo1.showTooltip">
+               Ver Más
+              </md-tooltip>
+                </md-button>
+-->
+                    <md-button ng-click="Editar($event, listav)" class="md-icon-button" aria-label="Editar">
+          <md-icon md-svg-icon="images/underline6.svg" ></md-icon>
+          <md-tooltip md-visible="demo2.showTooltip">
+               Editar
+              </md-tooltip>
+                </md-button>
+                    <md-button ng-click="Eliminar(listav._id)" class="md-icon-button" aria-label="Eliminar">
+          <md-icon md-svg-icon="images/clear5.svg" ></md-icon>
+          <md-tooltip md-visible="demo3.showTooltip">
+               Eliminar
+              </md-tooltip>
+                </md-button></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+             <md-button ng-click="Nuevo($event)" class="md-primary md-hue-2 md-icon-button" id="guardar" aria-label="Nuevo" >
+              <md-icon md-svg-src="images/add182.svg"></md-icon>
+              <md-tooltip md-visible="demo4.showTooltip">
+               Nuevo
+              </md-tooltip>
+            </md-button>
+            </div>
+        </md-content>
+
+      </md-tab>
+
+      <md-tab label="Padres">
+        <md-content class="md-padding">
+          <div class="Tcontainer">
+              <table >
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>CLAVE</th>
+                    <th>TIPO USUARIO</th>
+                    <th class="ttoken">TOKEN</th>
+                     <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr tr ng-repeat="listav in listaviews | filter:{tipousuario: 'padre'}| filter:buscador" >
+                    <td class="dprincipal">{{ listav._id }} </td>
+                    <td> {{ listav.clave }} </td>
+                    <td> {{ listav.tipousuario }} </td>
+                    <td class="ttoken"> {{ listav.token }} </td>
+                    
+                    <td class="tbotones">
+                    <md-button ng-click="VerMas($event, listav)" class="md-icon-button" aria-label="Ver Más">
+          <md-icon md-svg-icon="images/add180.svg" ></md-icon>
+          <md-tooltip md-visible="demo1.showTooltip">
+               Ver Más
+              </md-tooltip>
+                </md-button>
+                     <md-button ng-click="Editar($event, listav)" class="md-icon-button" aria-label="Editar">
+          <md-icon md-svg-icon="images/underline6.svg" ></md-icon>
+          <md-tooltip md-visible="demo2.showTooltip">
+               Editar
+              </md-tooltip>
+                </md-button>
+                    <md-button ng-click="Eliminar(listav._id)" class="md-icon-button" aria-label="Eliminar">
+          <md-icon md-svg-icon="images/clear5.svg" ></md-icon>
+          <md-tooltip md-visible="demo3.showTooltip">
+               Eliminar
+              </md-tooltip>
+                </md-button></td>
+                </tbody>
+              </table>
+
+        <md-button ng-click="Nuevo($event)" class="md-primary md-hue-2 md-icon-button" aria-label="Nuevo" flex flex-md="100">
+              <md-icon md-svg-src="images/add182.svg"></md-icon>
+              <md-tooltip md-visible="demo4.showTooltip">
+               Nuevo
+              </md-tooltip>
+            </md-button>
+
+            </div>
+        </md-content>
+      </md-tab>
+      <md-tab label="Conductores">
+        <md-content class="md-padding">
+        
+        <div class="Tcontainer">
+              <table >
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>CLAVE</th>
+                    <th>TIPO USUARIO</th>
+                    <th class="ttoken">TOKEN</th>
+                     <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr tr ng-repeat="listav in listaviews | filter:{tipousuario: 'conductor'}| filter:buscador" >
+                    <td class="dprincipal">{{ listav._id }} </td>
+                    <td> {{ listav.clave }} </td>
+                    <td> {{ listav.tipousuario }} </td>
+                    <td class="ttoken"> {{ listav.token }} </td>
+                    
+                    <td class="tbotones">
+                    <md-button ng-click="VerMas($event, listav)" class="md-icon-button" aria-label="Ver Más">
+          <md-icon md-svg-icon="images/add180.svg" ></md-icon>
+          <md-tooltip md-visible="demo1.showTooltip">
+               Ver Más
+              </md-tooltip>
+                </md-button>
+                     <md-button ng-click="Editar($event, listav)" class="md-icon-button" aria-label="Editar">
+          <md-icon md-svg-icon="images/underline6.svg" ></md-icon>
+          <md-tooltip md-visible="demo2.showTooltip">
+               Editar
+              </md-tooltip>
+                </md-button>
+                    <md-button ng-click="Eliminar(listav._id)" class="md-icon-button" aria-label="Eliminar">
+          <md-icon md-svg-icon="images/clear5.svg" ></md-icon>
+          <md-tooltip md-visible="demo3.showTooltip">
+               Eliminar
+              </md-tooltip>
+                </md-button></td>
+                </tbody>
+              </table>
+
+        <md-button ng-click="Nuevo($event)" class="md-primary md-hue-2 md-icon-button" aria-label="Nuevo" flex flex-md="100">
+              <md-icon md-svg-src="images/add182.svg"></md-icon>
+              <md-tooltip md-visible="demo4.showTooltip">
+               Nuevo
+              </md-tooltip>
+              </md-button>
+            </div>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+
+</div>

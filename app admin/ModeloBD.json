@@ -1,0 +1,110 @@
+//Persona
+PersonaSchema = new Schema ({
+    _id : String,
+    primer_nombre : String,
+    segundo_nombre : String,
+    primer_apellido : String,
+    segundo_apellido : String,
+    f_nacimiento : Date,
+    f_expedicion_documento : Date,
+    rh : [
+        "A+",
+        "A-",
+        "B+",
+        "B-",
+        "O+",
+        "O-",
+        "AB+",
+        "AB-"],
+    telefono : String,
+    celular : String,
+    foto : String
+});
+
+//Usuario
+UsuarioSchema = new Schema ({
+    _id : { type : Schema.ObjectId, ref: "Persona" },
+    clave : string,
+    tipousuario : [
+        "padre",
+        "conductor",
+        "administrador"
+    ]
+});
+
+//Estudiante
+EstudianteSchema = new Schema({
+    Persona_id : { type : Schema.ObjectId, ref: "Persona" },
+    Padre.Persona_id : { type : Schema.ObjectId, ref: "Padre" },
+    latitud_hogar : String,
+    longitud_hogar : String,
+    grado_cursado : Integer, 
+    grupo_cursado : String   
+});
+
+//Padre
+PadreSchema = new Schema({
+    Persona_id : { type : Schema.ObjectId, ref: "Persona" },
+    Estudiante.Persona_id : { type : Schema.ObjectId, ref: "Estudiante" },
+    ocupacion : String,
+    direccion_trabajo : String,
+    telefono_trabajo : String,
+    email : String
+});
+
+//Conductor
+ConductorSchema = new Schema({
+    Persona_id : { type : Schema.ObjectId, ref: "Persona" },
+    numero_licencia : String,
+    f_expedicion_licencia : Date,
+    restricciones : String,
+    organismo_expedidor : String
+});
+
+//Vehiculo
+VehiculoSchema = new Schema({
+    
+    // Tarjeta de propiedad
+    licencia_transito : String,
+    placa : String,
+    linea :String,
+    modelo : String,
+    cilindrada : String,
+    color : String,
+    servicio : String,
+    clase_vehiculo : String,
+    tipo : String,
+    combustible : String,
+    pasajeros : String,
+    nro_motor : String,
+    vn : String,
+    nro_serie: String,
+    nro_chasis : String,
+    propietario : String,
+    identificacion : String,
+    
+    //SOAT
+    nro_soat : String,
+    aseguradora : String,
+    f_expedicion_soat : Date,
+    f_vencimiento_soat : Date,
+    cod_sucursal : String,
+    clave_producto : String,
+    ciudad_expedicion : String,
+    
+    //Tecnomecanica
+    nro_control : String,
+    centro_diagnostico : String,
+    nit : String,
+    f_expedicion_certificado : Date,
+    f_vencimiento_certificado : Date,
+    nro_certificado : String, 
+    consecutivo_runt : String 
+    
+});
+
+ListaPasajerosSchema = new Schema({
+    vehiculo_id : { type : Schema.ObjectId, ref: "Vehiculo" },
+    Estudiante.Persona_id : { type : Schema.ObjectId, ref: "Estudiante" }                      
+});
+

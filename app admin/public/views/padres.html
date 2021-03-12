@@ -1,0 +1,108 @@
+<div id="ContenedorPadres">
+<div class="Tcontainer">
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Primer Nombre</th>
+                    <th>Segundo Nombre</th>
+                    <th>Primer Apellido</th>
+                    <th>Segundo Apellido</th>
+                    <th></td>
+                  </tr>
+                </thead>
+               <tbody>
+
+      <tr ng-repeat="listav in listaviews | filter:buscador">
+      <td class="dprincipal">{{ listav._id }} </td>  
+      <td>{{ listav.primer_nombre }} </td> 
+      <td>{{ listav.segundo_nombre }} </td> 
+      <td>{{ listav.primer_apellido}} </td> 
+      <td>{{ listav.segundo_apellido}} </td> 
+  <td><md-button ng-click="VerMas($event, listav)" class="md-icon-button" aria-label="Ver Más">
+          <md-icon md-svg-icon="images/add180.svg" ></md-icon>
+          <md-tooltip md-visible="demo1.showTooltip">
+               Ver Más
+              </md-tooltip>
+         </md-button><md-button ng-click="Editar($event, listav)" class="md-icon-button" aria-label="Editar">
+          <md-icon md-svg-icon="images/underline6.svg" ></md-icon>
+          <md-tooltip md-visible="demo2.showTooltip">
+               Editar
+              </md-tooltip>
+                </md-button>
+                    <md-button ng-click="Eliminar(listav._id)" class="md-icon-button" aria-label="Eliminar">
+          <md-icon md-svg-icon="images/clear5.svg" ></md-icon>
+          <md-tooltip md-visible="demo3.showTooltip">
+               Eliminar
+              </md-tooltip>
+                </md-button></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+             <md-button ng-click="Nuevo($event)" class="md-primary md-hue-2 md-icon-button" id="guardar" aria-label="Nuevo">
+              <md-icon md-svg-src="images/add182.svg"></md-icon>
+              <md-tooltip md-visible="demo4.showTooltip">
+               Nuevo
+              </md-tooltip>
+            </md-button>
+        </div>
+
+<!--
+<div id="ContenedorPadres">
+</br>
+<div class="Tcontainer">
+ <div class="container">
+          <div class="row">
+              <table>
+                <thead>
+                  <tr class="tcolumna">
+                    <th>ID</th>
+                    <th>Primer Nombre</th>
+                    <th>Segundo Nombre</th>
+                    <th>Primer Apellido</th>
+                    <th>Segundo Apellido</th>
+                    <th></td>
+                  </tr>
+                </thead>
+               <tbody>
+
+      <tr ng-repeat="listav in listaviews">
+      <td>{{ listav._id }} </td>  
+      <td>{{ listav.primer_nombre }} </td> 
+      <td>{{ listav.segundo_nombre }} </td> 
+      <td>{{ listav.primer_apellido}} </td> 
+      <td>{{ listav.segundo_apellido}} </td> 
+  <td><md-button ng-click="VerMas($event, listav)" class="md-icon-button" aria-label="Ver Más">
+          <md-icon md-svg-icon="images/add180.svg" ></md-icon>
+          <md-tooltip md-visible="demo1.showTooltip">
+               Ver Más
+              </md-tooltip>
+         </md-button><md-button ng-click="Editar($event, listav)" class="md-icon-button" aria-label="Editar">
+          <md-icon md-svg-icon="images/underline6.svg" ></md-icon>
+          <md-tooltip md-visible="demo2.showTooltip">
+               Editar
+              </md-tooltip>
+                </md-button>
+                    <md-button ng-click="Eliminar(listav._id)" class="md-icon-button" aria-label="Eliminar">
+          <md-icon md-svg-icon="images/clear5.svg" ></md-icon>
+          <md-tooltip md-visible="demo3.showTooltip">
+               Eliminar
+              </md-tooltip>
+                </md-button></td>
+                </tr>
+                </tbody>
+              </table>
+
+        <md-button ng-click="Nuevo($event)" class="md-primary md-hue-2 md-icon-button" aria-label="Nuevo" flex flex-md="100">
+              <md-icon md-svg-src="images/add182.svg"></md-icon>
+              <md-tooltip md-visible="demo4.showTooltip">
+               Nuevo
+              </md-tooltip>
+            </md-button>
+            </div>
+        </div>
+        </div>
+        </div>
+</div>
+-->

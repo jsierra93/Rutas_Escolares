@@ -1,0 +1,81 @@
+<md-dialog aria-label="Registrar"  id="FormularioVehiculos" class="blurBg-true" style="background-color:#EBEBEB">
+
+<form enctype="multipart/form-data" class="formoid-solid-blue" style="background-color:#FFFFFF;font-size:12px;font-family:'Roboto',Arial,Helvetica,sans-serif;color:#34495E;max-width:520px;min-width:350px; overflow-x:hidden;" method="">
+
+<div class="title"><h2>Registrar Vehiculos</h2></div>
+  <div class="element-separator" title="Datos Vehiculo"><hr><h3 class="section-break-title">Datos Vehiculo</h3></div>
+
+  <div class="element-input" title="Placa"><label class="title"><span class="required">*</span></label><div class="item-cont"><input autofocus ng-model="seleccion._id" class="large" type="text" name="input" required="required" placeholder="Placa" autocomplete="off" /><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="Licencia N°"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.licencia_transito" class="large" type="text" name="input1" placeholder="Licencia N°"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="Linea"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.linea" class="large" type="text" name="input2" placeholder="Linea"/><span class="icon-place"></span></div></div>
+
+  <div class="element-number" title="Modelo"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.modelo" class="large" type="text" min="1900" max="2030" name="number" placeholder="Modelo" value=""/><span class="icon-place"></span></div></div>
+
+  <div class="element-number" title="Cilindrada"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.cilindrada" class="large" type="text" min="0" max="10000" name="number1" placeholder="Cilindrada" value=""/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="Color"><label class="title"></label><div class="item-cont"><input  ng-model="seleccion.color" class="large" type="text" name="input3" placeholder="Color"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="Servicio"><label class="title"></label><div class="item-cont"><input  ng-model="seleccion.servicio" class="large" type="text" name="input17" placeholder="Servicio"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="Clase"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.clase_vehiculo" class="large" type="text" name="input18" placeholder="Clase"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="Tipo"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.tipo" class="large" type="text" name="input4" placeholder="Tipo"/><span class="icon-place"></span></div></div>
+
+<div class="element-input" title="Combustible"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.combustible" class="large" type="text" name="input40" placeholder="Combustible"/><span class="icon-place"></span></div></div>
+
+  <div class="element-number" title="Pasajeros"><label class="title"><span class="required">*</span></label><div class="item-cont"><input ng-model="seleccion.pasajeros" class="large" type="text" min="1" max="100" name="number2" required="required" placeholder="Pasajeros" value=""/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="N° Motor"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.numero_motor" class="large" type="text" name="input5" placeholder="N° Motor"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="VN"><label class="title"></label><div class="item-cont"><input  ng-model="seleccion.vn" class="large" type="text" name="input6" placeholder="VN"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="N° Chasis"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.numero_chasis" class="large" type="text" name="input7" placeholder="N° Chasis"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="Propietario"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.propietario" class="large" type="text" name="input8" placeholder="Propietario"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="Identificación"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.identificacion"  class="large" type="text" name="input19" placeholder="Identificación"/><span class="icon-place"></span></div></div>
+
+<div class="element-input" title="Foto"><div class="item-cont"><input  ng-model="seleccion.foto" class="large" type="text" name="input" placeholder="Url Foto" autofocus/><span class="icon-place"></span></div></div>
+
+  <div class="element-file" title="Foto"><label class="title"></label><div class="item-cont"><label class="large" ><div class="button">Cargar</div><input type="file" class="file_input" name="file" /><div class="file_text">No seleccionada</div><span class="icon-place"></span></label></div></div>
+  
+  <div class="element-separator" title="SOAT"><hr><h3 class="section-break-title">SOAT</h3></div>
+
+  <div class="element-input" title="N° Soat"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.numero_soat" class="large" type="text" name="input20" placeholder="N° Soat"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="Aseguradora"><label class="title"></label><div class="item-cont"><input g-model="seleccion.aseguradora" class="large" type="text" name="input9" placeholder="Aseguradora"/><span class="icon-place"></span></div></div>
+
+  <div class="element-date" title="F. Expedición"><label class="title"><span class="required">* F. Expedición</span></label><div class="item-cont"><input ng-model="seleccion.f_expedicion_soat" class="large" data-format="yyyy-mm-dd" type="date" name="date" required="required" placeholder="F. Expedición"/><span class="icon-place"></span></div></div>
+
+  <div class="element-date" title="F. Vencimiento"><label class="title"><span class="required">* F. Vencimiento</span></label><div class="item-cont"><input ng-model="seleccion.f_vencimiento_soat" class="large" data-format="yyyy-mm-dd" type="date" name="date1" required="required" placeholder="F. Vencimiento"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="Cod. Sucursal"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.cod_sucursal"class="large" type="text" name="input10" placeholder="Cod. Sucursal"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="Clave Producto"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.clave_producto" class="large" type="text" name="input11" placeholder="Clave Producto"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="Ciudad"><label class="title"></label><div class="item-cont"><input  ng-model="seleccion.ciudad_expedicion" class="large" type="text" name="input12" placeholder="Ciudad"/><span class="icon-place"></span></div></div>
+
+  <div class="element-separator" title="Certificado Tecnico-Mecanico"><hr><h3 class="section-break-title">Certificado Tecnico-Mecanico</h3></div>
+
+  <div class="element-input" title="Numero Control"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.numero_control" class="large" type="text" name="input13" placeholder="Numero Control"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="Centro Diagnostico"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.centro_diagnostico" class="large" type="text" name="input14" placeholder="Centro Diagnostico"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="NIT"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.nit" class="large" type="text" name="input15" placeholder="NIT"/><span class="icon-place"></span></div></div>
+
+  <div class="element-date" title="F. Expedición"><label class="title"></label>* F. Expedición<div class="item-cont"><input ng-model="seleccion.f_expedicion_certificado"  class="large" data-format="yyyy-mm-dd" type="date" name="date2" placeholder="F. Expedición"/><span class="icon-place"></span></div></div>
+
+  <div class="element-date" title="F. Vencimiento"><label class="title"></label>* F. Vencimiento<div class="item-cont"><input ng-model="seleccion.f_vencimiento_certificado" class="large" data-format="yyyy-mm-dd" type="date" name="date3" placeholder="F. Vencimiento"/><span class="icon-place"></span></div></div>
+
+  <div class="element-input" title="Consecutivo RUNT"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.consecutivo_runt" class="large" type="text" name="input16" placeholder="Consecutivo RUNT"/><span class="icon-place"></span></div></div>
+
+<md-divider></md-divider>
+<div class="" layout="row">
+  <span flex></span>
+  <md-button ng-click="respuesta ('cancelar')" class="md-primary"> Cancelar </md-button>
+  <md-button ng-click="respuesta (seleccion)" class="md-primary"> Enviar </md-button>
+  </div>
+</form>
+</md-dialog>

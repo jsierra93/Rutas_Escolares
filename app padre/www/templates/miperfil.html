@@ -1,0 +1,59 @@
+<ion-view view-title="Mi Perfil">
+  <ion-content>
+
+  <div class="item item-image">
+    <img class="fconductor" src="http://130.211.180.114/{{Dpadre.foto}}">
+  </div>
+    
+    <div class="item item-divider text-center ">
+    Información Basica
+  </div>
+
+<table class="tabla">
+<tbody>
+	<tr class="tfila">
+		<td class="ctabla">IDENTIFICACIÓN</td>
+		<td class="dtabla">{{Dpadre._id}}</td>
+	</tr>
+	<tr>
+		<td td class="ctabla">NOMBRE COMPLETO</td>
+		<td  class="dtabla">{{Dpadre.primer_nombre}} {{ Dpadre.segundo_nombre}} {{Dpadre.primer_apellido}} {{ Dpadre.segundo_apellido}}</td></td>
+	</tr>
+      <tr class="tfila">
+            <td class="ctabla"> FECHA NACIMIENTO</td>
+            <td class="dtabla">{{Dpadre.f_nacimiento |  date : format : shortDate}}</td>
+        </tr>
+        <tr >
+            <td class="ctabla">TIPO DE SANGRE (RH)</td>
+            <td class="dtabla">{{Dpadre.rh }}</td>
+        </tr>
+      <tr class="tfila">
+            <td class="ctabla">TELEFONO</td>
+            <td class="dtabla">{{Dpadre.telefono}} </td>
+        </tr>
+        <tr>
+            <td class="ctabla">CELULAR</td>
+            <td class="dtabla">{{Dpadre.celular}} </td>
+        </tr>
+        <tr class="tfila">
+            <td class="ctabla">OCUPACIÓN</td>
+            <td class="dtabla">{{Dpadre.ocupacion}} </td>
+        </tr>
+        <tr>
+            <td class="ctabla">EMAIL</td>
+            <td class="dtabla">{{Dpadre.email}} </td>
+        </tr>
+        <tr class="tfila">
+            <td class="ctabla">D/CIÓN TRABAJO</td>
+            <td class="dtabla">{{Dpadre.direccion_trabajo}} </td>
+        </tr>
+        <tr>
+            <td class="ctabla">TEL. TRABAJO</td>
+            <td class="dtabla">{{Dpadre.telefono_trabajo}} </td>
+        </tr>
+</tbody>
+</table>
+
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,47 @@
+<md-dialog aria-label="Pasajeros" id="VerPasajeros">
+  <div layout="column" class="inputdemoIcons">
+  <br>
+  <md-content>
+ <h3 class="center">Pasajeros de Ruta</h3>
+<div  class="Tcontainer">
+  <table>
+             <thead>
+                  <tr>
+                    <th class="center" ></th>
+                    <th class="center">ID</th>
+                    <th class="center">Nombre Completo</th>
+                    <th class="center" >F. Nacimiento</th>
+                    <th class="center" >Celular</th>
+                    <th class="center" >Telefono</th>
+                    <th class="center">Dirección Residencia</th>
+                    <th class="center">Latitud</th>
+                    <th class="center">Longitud</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+<tr ng-repeat="listaP in seleccion">
+<td><img ng-src="{{listaP.foto}}" id="avatarPasajero" class="img-circle" alt="Foto"></td>  
+<td class="dprincipal">{{ listaP._id }} </td>  
+<td>{{ listaP.primer_nombre}} {{ listaP.segundo_nombre}} {{ listaP.primer_apellido}} {{ listaP.segundo_apellido}} </td> 
+<td>{{ listaP.f_nacimiento |  date : format : shortDate}} </td>  
+<td>{{ listaP.celular }} </td>  
+<td>{{ listaP.telefono}} </td> 
+<td>{{listaP.direccion}} </td> 
+<td>{{ listaP.latitud_hogar }} </td> 
+<td>{{ listaP.longitud_hogar }} </td> 
+
+                </tr>
+                </tbody>
+              </table>
+
+</div>
+
+  </md-content>
+</div>
+<div class="md-actions" layout="row">
+  <span flex></span>
+  <md-button ng-click="respuesta (Pasajeros)" class="md-primary"> Cerrar </md-button>
+  </div>
+</md-dialog>

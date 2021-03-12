@@ -1,0 +1,90 @@
+#LogoLogin {
+	margin-left: 15%;
+	border: none;
+}
+
+.fconductor{
+  max-height: 20%;
+  max-width: 25%;
+  text-align: center;
+}
+
+.fruta{
+  min-height: 24%;
+  min-width: 28%;
+  text-align: center;
+}
+
+.scroll {
+	 height: 100%;
+	 width: 100%;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.flotante {
+	display:scroll;
+        position:fixed;
+        bottom:320px;
+        right:0px;
+}
+
+.ion-checkbox {
+	color: blue;
+}
+
+.botonF1{
+  text-align: center;
+  height:50px;
+  border-radius:20%;
+  background:#ccc;
+  right:0;
+  bottom:0;
+  position:absolute;
+  margin-right:16px;
+  margin-bottom:25px;
+  border:none;
+  outline:none;
+  color:#FFF;
+  font-size:20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition:.3s;  
+}
+
+
+.botonF1:hover span{
+  transform:rotate(360deg);
+}
+.botonF1:active{
+  transform:scale(1.1);
+}
+
+.tablavehiculo {
+
+   height: auto;
+  width: 90%;
+}
+
+.tabla {
+  height: auto;
+  width: 88%;
+  margin-left: 5%;
+  }
+
+.tfila{
+  background: rgba(0,0,0,0.3);
+}
+
+.ctabla {
+  text-align: center;
+  padding: 3px;
+
+}
+
+.dtabla{
+  font-size: 1.2em;
+  font-weight: bold;
+  }

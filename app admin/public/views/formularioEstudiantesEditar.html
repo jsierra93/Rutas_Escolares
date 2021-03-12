@@ -1,0 +1,69 @@
+<md-dialog aria-label="Registrar"  id="FormularioPadres" class="blurBg-true" style="background-color:#EBEBEB">
+
+<form enctype="multipart/form-data" class="formoid-solid-blue" style="background-color:#FFFFFF;font-size:14px;font-family:'Roboto',Arial,Helvetica,sans-serif;color:#34495E;max-width:520px;min-width:300px" method="post">
+<div class="title"><h2>Modificar Estudiantes</h2></div>
+
+  <div class="element-input" title="ID"><label class="title"><span class="required">*</span></label><div class="item-cont"><input  ng-model="seleccion._id" class="large" type="text" name="input" required="required" placeholder="ID" autofocus/><span class="icon-place"></span></div></div>
+
+  <div class="element-name"><label class="title"><span class="required">*</span></label>
+    <span  class="nameLast"><input ng-model="seleccion.primer_nombre" placeholder=" Primer Nombre" type="text" size="14" name="name1[first]" required="required"/><span class="icon-place"></span></span>
+    
+    <span class="nameLast"><input ng-model="seleccion.segundo_nombre" placeholder=" Segundo Nombre" type="text" size="14" name="name1[last]" required="required"/><span class="icon-place"></span></span>
+  </div>
+
+  <div class="element-name"><label class="title"><span class="required">*</span></label>
+    <span class="nameLast"><input ng-model="seleccion.primer_apellido" placeholder=" Primer Apellido" type="text" size="8" name="name2[first]" required="required"/><span class="icon-place"></span></span>
+
+    <span class="nameLast"><input  ng-model="seleccion.segundo_apellido" placeholder=" Segundo Apellido" type="text" size="14" name="name2[last]" required="required"/><span class="icon-place"></span></span>
+  </div>
+
+  <div class="element-date" title="Fecha Nacimiento"><label class="title"><span class="required">Fecha Nacimiento</span></label><div class="item-cont"><input ng-model="seleccion.f_nacimiento" class="large" data-format="yyyy-mm-dd" type="date" name="date" required="required" placeholder="Fecha Nacimiento"/><span class="icon-place"></span></div>
+  </div>
+
+  <div class="element-select" title="RH"><label class="title"><span class="required">Tipo de Sangre</span></label><div class="item-cont"><div class="large"><span><md-select ng-model="seleccion.rh" placeholder="Tipo de Sangre" id="susuario" >
+       <md-option  value="A+" >A+</md-option>
+       <md-option  value="A-">A-</md-option>
+       <md-option  value="B+">B+</md-option>
+       <md-option  value="B-">B-</md-option>
+       <md-option  value="O+" >O+</md-option>
+       <md-option  value="O-">O-</md-option>
+       <md-option  value="AB+">AB+</md-option>
+       <md-option  value="AB-">AB-</md-option>
+    </md-select><i></i><span class="icon-place"></span></span></div></div>
+    </div>
+
+  <div class="element-phone" title="Telefono"><label class="title"><span class="required">*</span></label><div class="item-cont"><input ng-model="seleccion.telefono"  class="large" type="tel" pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="phone" required="required" placeholder="Telefono" value=""/><span class="icon-place"></span></div>
+  </div>
+
+  <div class="element-phone" title="Celular"><label class="title"><span class="required">*</span></label><div class="item-cont"><input ng-model="seleccion.celular"  class="large" type="tel" pattern="\d{3}-\d{3}-\d{4}" maxlength="24" name="phone1" required="required" placeholder="XXX-XXX-XXXX" value=""/><span class="icon-place"></span></div>
+  </div>
+
+  <div class="element-email" title="Email"><label class="title"></label><div class="item-cont"><input ng-model="seleccion.email" class="large" type="email" name="email" value="" placeholder="Email"/><span class="icon-place"></span></div>
+  </div>
+
+<div class="element-input" title="ID Padre"><div class="item-cont"><input  ng-model="seleccion.padres" class="large" type="text" name="input" placeholder="ID Padre" autofocus/><span class="icon-place"></span></div></div>
+
+<div class="element-input" title="Latitud Hogar"><div class="item-cont"><input  ng-model="seleccion.latitud_hogar" class="large" type="text" name="input" placeholder="Latitud Hogar" autofocus/><span class="icon-place"></span></div></div>
+
+<div class="element-input" title="Longitud Hogar"><div class="item-cont"><input  ng-model="seleccion.longitud_hogar" class="large" type="text" name="input" placeholder="Longitud Hogar" autofocus/><span class="icon-place"></span></div></div>
+
+<div class="element-input" title="Dirección"><div class="item-cont"><input  ng-model="seleccion.direccion" class="large" type="text" name="input" placeholder="Dirección" autofocus/><span class="icon-place"></span></div></div>
+
+<div class="element-input" title="Grado Cursado"><div class="item-cont"><input  ng-model="seleccion.grado_cursado" class="large" type="text" name="input" placeholder="Grado Cursado" autofocus/><span class="icon-place"></span></div></div>
+
+<div class="element-input" title="Grupo Cursado"><div class="item-cont"><input  ng-model="seleccion.grupo_cursado" class="large" type="text" name="input" placeholder="Grupo Cursado" autofocus/><span class="icon-place"></span></div></div>
+
+<div class="element-input" title="Foto"><div class="item-cont"><input  ng-model="seleccion.foto" class="large" type="text" name="input" placeholder="Url Foto" autofocus/><span class="icon-place"></span></div></div>
+
+<!--
+  <div class="element-file" title="Foto"><label class="title"><span class="required">*</span></label><div class="item-cont"><label class="large" ><div class="button">Cargar</div><input  type="file" class="file_input" name="file" required="required"/><div class="file_text">Seleccionar Foto</div><span class="icon-place"></span></label></div>
+  </div>
+-->
+<md-divider></md-divider>
+  <div class="" layout="row">
+  <span flex></span>
+    <md-button ng-click="respuesta ('cancelar')" class="md-primary"> Cancelar </md-button>
+    <md-button ng-click="respuesta (seleccion)" class="md-primary"> Enviar </md-button>
+  </div>
+</md-dialog>
+

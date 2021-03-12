@@ -1,0 +1,30 @@
+<md-dialog aria-label="Registrar" class="blurBg-true" style="background-color:#EBEBEB">
+
+<!-- Start Formoid form-->
+<form class="formoid-solid-green" style="background-color:#ffffff;font-size:14px;font-family:'Roboto',Arial,Helvetica,sans-serif;color:#34495E;max-width:400px;min-width:150px" method="post">
+<div class="title"><h2>Modificar Usuarios</h2></div>
+<div class="element-input" title="ID">
+<label class="title"><span class="required">*</span></label>
+<div class="item-cont"><input class="large" type="text" required="required" placeholder="ID" ng-model="seleccion._id"/>
+<span class="icon-place"></span>
+</div></div>
+  <div class="element-password" title="Clave"><label class="title"><span class="required">*</span></label><div class="item-cont"><input class="large" type="password" name="password" value="" required="required" placeholder="Clave" ng-model="seleccion.clave"/><span class="icon-place"></span></div></div>
+  <div class="element-select" title="Tipo Usuario"><label class="title"><span class="required">*</span></label>
+  <div class="item-cont">
+  <div class="large">
+    <span> <md-select name="select" id="susuario" placeholder="Tipo Usuario" ng-model="seleccion.tipousuario">
+       <md-option  value="administrador" >administrador</md-option>
+       <md-option  value="padre">padre</md-option>
+       <md-option  value="conductor">conductor</md-option>
+    </md-select>
+   </span>
+  </div>
+    </div>
+    <md-divider></md-divider>
+    </div><div class="md-actions" layout="row">
+  <span flex></span>
+  <md-button ng-click="respuesta ('cancelar')" class="md-primary"> Cancelar </md-button>
+  <md-button ng-click="respuesta (seleccion)" class="md-primary"> Enviar </md-button>
+  </div>
+  </form>
+</md-dialog>

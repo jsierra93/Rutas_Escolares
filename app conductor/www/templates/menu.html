@@ -1,0 +1,67 @@
+<ion-side-menus enable-menu-with-back-views="false" >
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left"  >
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content> 
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable  bar-positive">
+      <h1 class="title">Menú</h1>
+    </ion-header-bar>
+    <ion-content>
+    <div class="list card">
+
+  <div class="item item-avatar">
+    <img src="http://130.211.180.114/images/avatar.jpg">
+    <h2>{{usuarioActual}}</h2>
+    <p>{{rutaActual}}</p>
+    <a class="item item-icon-left assertive" ng-click="Salir()">
+    <i class="icon ion-android-close"></i>
+    Salir
+  </a>
+   </div> 
+    </div>
+      <ion-list>
+        <ion-item menu-close href="#/app/inicio">
+        <i class="icon ion-map"></i>
+          Monitor
+        </ion-item>
+        <ion-item menu-close href="#/app/pasajeros">
+         <i class="icon ion-android-contacts"></i>
+          Pasajeros
+        </ion-item>
+        <ion-item menu-close href="#/app/mivehiculo">
+        <i class="icon ion-android-bus"></i>
+          Mi Vehiculo
+        </ion-item>
+        <ion-item menu-close href="#/app/miperfil">
+         <i class="icon ion-android-contact"></i>
+          Mi Perfil
+        </ion-item>
+        <!--
+        <ion-item menu-close href="#/app/ajustes">
+         <i class="icon ion-android-options"></i>
+          Ajuste
+        </ion-item>
+        -->
+        <ion-item menu-close href="#/app/ayuda">
+         <i class="ion-android-warning"></i>
+       Reportar Falla/Daño
+        </ion-item>
+        <ion-item menu-close href="#/app/acercade">
+         <i class="icon ion-information-circled"></i>
+          Acerca de 
+        </ion-item>
+      </ion-list>
+
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

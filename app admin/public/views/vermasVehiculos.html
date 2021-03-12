@@ -1,0 +1,149 @@
+<md-dialog aria-label="Información Vehiculos" id="CuerpoModal">
+  <div layout="column">
+  <md-content >
+  <h3>DATOS VEHICULOS</h3>
+     <md-divider ></md-divider>
+   <img ng-src="{{seleccion.foto}}" id="avatarVehiculo" class="img-circle" alt="Foto">
+   </br>
+   <md-divider></md-divider>
+  <table class="table table-bordered">
+    <thead>
+    </thead>
+    <tbody>
+        <tr >
+            <td class="active">PLACA</td>
+            <td class="info">{{ seleccion._id }}</td>
+        </tr>
+        <tr>
+            <td class="active"> LICENCIA DE TRANSITO</td>
+            <td class="info">{{seleccion.licencia_transito}}</td>
+        </tr>
+        <tr >
+            <td class="active">LINEA</td>
+            <td class="info">{{seleccion.linea}}</td>
+        </tr>
+        <tr >
+            <td class="active">MODELO</td>
+            <td class="info">{{seleccion.modelo}} </td>
+        </tr>
+        <tr>
+            <td class="active">CILINDRADA</td>
+            <td class="info">{{seleccion.cilindrada}} </td>
+        </tr>
+        <tr>
+            <td class="active">COLOR</td>
+            <td class="info">{{seleccion.color}}</td>
+        </tr>
+        <tr>
+            <td class="active">SERVICIO</td>
+            <td class="info"> {{seleccion.servicio}} </td>
+        </tr>
+        <tr>
+            <td class="active">CLASE DE VEHICULO</td>
+            <td class="info"> {{seleccion.clase_vehiculo}} </td>
+        </tr>
+        <tr>
+            <td class="active"> TIPO</td>
+            <td class="info"> {{seleccion.tipo}} </td>
+        </tr>
+      <tr>
+            <td class="active">COMBUSTIBLE</td>
+            <td class="info"> {{seleccion.combustible}} </td>
+        </tr>
+        <tr>
+            <td class="active">PASAJEROS</td>
+            <td class="info"> {{seleccion.pasajeros}} </td>
+        </tr>
+        <tr>
+            <td class="active">N° MOTOR</td>
+            <td class="info"> {{seleccion.numero_motor}} </td>
+        </tr>
+        <tr>
+            <td class="active">VN</td>
+            <td class="info"> {{seleccion.vn}} </td>
+        </tr>
+        <tr>
+            <td class="active">N° CHASIS</td>
+            <td class="info"> {{seleccion.numero_chasis}} </td>
+        </tr>
+        <tr>
+            <td class="active">PROPIETARIO</td>
+            <td class="info"> {{seleccion.propietario}} </td>
+        </tr>
+        <tr>
+            <td class="active">IDENTIFICACIÓN</td>
+            <td class="info"> {{seleccion.identificacion}} </td>
+        </tr>        
+        <tr>
+            <td class="active">N° SOAT</td>
+            <td class="info"> {{seleccion.numero_soat}} </td>
+        </tr>
+        <tr>
+            <td class="active">ASEGURADORA</td>
+            <td class="info"> {{seleccion.aseguradora}} </td>
+        </tr>
+        <tr>
+            <td class="active">F. EXPEDICIÓN SOAT</td>
+            <td class="info"> {{seleccion.f_expedicion_soat |  date : format : shortDate}} </td>
+        </tr>
+        <tr>
+            <td class="active">F. VENCIMIENTO SOAT</td>
+            <td class="info"> {{seleccion.f_vencimiento_soat |  date : format : shortDate}} </td>
+        </tr>
+        <tr>
+            <td class="active">CODIGO SUCURSAL</td>
+            <td class="info"> {{seleccion.cod_sucursal}} </td>
+        </tr>
+        <tr>
+            <td class="active">CLAVE PRODUCTO</td>
+            <td class="info"> {{seleccion.clave_producto}} </td>
+        </tr>
+        <tr>
+            <td class="active">CIUDAD EXPEDICIÓN</td>
+            <td class="info"> {{seleccion.ciudad_expedicion}} </td>
+        </tr>
+        <tr>
+            <td class="active">N° CONTROL</td>
+            <td class="info"> {{seleccion.numero_control}} </td>
+        </tr>
+        <tr>
+            <td class="active">CENTRO DE DIAGNOSTICO</td>
+            <td class="info"> {{seleccion.centro_diagnostico}} </td>
+        </tr>
+        <tr>
+            <td class="active">NIT</td>
+            <td class="info"> {{seleccion.nit}} </td>
+        </tr>
+        <tr>
+            <td class="active">F. EXPEDICIÓN CERTIFICADO</td>
+            <td class="info"> {{seleccion.f_expedicion_certificado |  date : format : shortDate}} </td>
+        </tr>
+        <tr>
+            <td class="active">F. VENCIMIENTO CERTIFICADO</td>
+            <td class="info"> {{seleccion.f_vencimiento_certificado |  date : format : shortDate}} </td>
+        </tr>
+        <tr>
+            <td class="active">CONSECUTIVO RUNT</td>
+            <td class="info"> {{seleccion.consecutivo_runt}} </td>
+        </tr>
+    </tbody>
+</table>  
+<md-label>Descargar Adjuntos</md-label>
+<md-button ng-click="" class="md-icon-button" aria-label="Descargar Adjuntos">
+<a href='../images/adjuntos/vehiculos/{{seleccion._id}}/{{seleccion._id}}.zip' download>
+          <md-icon md-svg-icon="images/cloud.svg" ></md-icon>
+          <md-tooltip md-visible="demo1.showTooltip">
+               Descargar 
+              </md-tooltip>
+              </a>
+         </md-button>
+
+  </md-content>
+</div>
+<div class="md-actions" layout="row">
+  <span flex></span>
+  <md-button ng-click="respuesta (user)" class="md-primary"> Cerrar </md-button>
+  </div>
+</md-dialog>
+
+

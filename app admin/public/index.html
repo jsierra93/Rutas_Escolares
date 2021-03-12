@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="Proyecto">
+<head>
+    <link rel="stylesheet" href="css/materialize.min.css">
+<link rel="stylesheet" href="css/angular-material.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+	<meta charset = "utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title> RUTAS ESCOLARES </title>
+</head>
+<div ng-controller="HomeCtrl" data-ng-init="ObtenerTokenLogin()">
+<div layout="row" layout-wrap>
+    
+<div flex="35" hide-sm class="laterales">
+   
+</div>
+<div id="FormularioLogin" flex="30" flex-sm="100" >
+
+<form ng-submit="signin()" class="FormLogin">
+<div id="CabeceraFormulario" >
+     <md-toolbar md-scroll-shrink>
+    <div class="md-toolbar-tools" >
+      <h3>ADMIN LOGIN
+      </h3>
+    </div>
+  </md-toolbar>
+</div> 
+<div id="CuerpoFormulario" class="center" >
+    <img id="avatar"  src="/images/avatar.jpg" >
+      <md-content layout-padding class="autoScroll">
+    <md-input-container md-no-float>
+      <md-icon class="iconLogin" md-svg-src="images/user.svg"></md-icon>
+      <input class="inputLogin" ng-model="_id" type="text" placeholder="Usuario / ID" required>
+    </md-input-container>
+
+ <md-input-container md-no-float>
+      <md-icon class="iconLogin" md-svg-src="images/locked57.svg"></md-icon>
+      <input class="inputLogin" ng-keypress="Enter($event)" ng-model="clave" type="password" placeholder="Contraseña" required>
+    </md-input-container>
+    </md-content>
+</div> 
+<div id="PieFormulario" >
+    
+     <md-toolbar md-scroll-shrink>
+    <div class="md-toolbar-tools">
+    <a class="md-primary" id="RecuperarClave" ng-href="formulario_contacto.html" >Olvide mi contraseña</a>
+    <md-button id="BtnLogin" type="submit" class="md-raised md-primary">Login</md-button>
+    </div>
+  </md-toolbar>
+</div>
+ </form> 
+</div>
+<div flex="35" hide-sm  class="laterales">
+   
+</div>
+
+</div>
+   <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-animate.min.js"></script>
+    <script src="/js/angular-aria.min.js"></script>   
+     <script src="/js/angular-route.min.js"></script>
+  <script src="/js/angular-material.min.js"></script>
+
+   <script type="text/javascript" src="/js/ngStorage.js"></script>
+     <script type="text/javascript" src="/routes/homeRoute.js"></script>
+     <script type="text/javascript" src="/controllers/homectrl.js"></script>
+     <script type="text/javascript" src="/services/homeService.js"></script>
+      <script type="text/javascript" src="/js/socket.io.js"></script>
+</body>
+</html>

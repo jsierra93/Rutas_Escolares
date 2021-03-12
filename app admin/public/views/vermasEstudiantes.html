@@ -1,0 +1,67 @@
+<md-dialog aria-label="Información Estudiantes" class="formulario_vermas">
+  <div layout="column">
+  <md-content >
+  <h3>DATOS PERSONALES</h3>
+     <md-divider ></md-divider>
+   <img ng-src="{{seleccion.foto}}" id="avatar" class="img-circle" alt="Foto">
+   <md-divider ></md-divider>
+  <table class="table table-bordered">
+    <thead>
+    </thead>
+    <tbody>
+        <tr >
+            <td class="active">ID</td>
+            <td class="info">{{ seleccion._id }}</td>
+        </tr>
+        <tr>
+            <td class="active">NOMBRE COMPLETO</td>
+            <td class="info">{{seleccion.primer_nombre}} {{ seleccion.segundo_nombre}} {{seleccion.primer_apellido}} {{ seleccion.segundo_apellido}}</td>
+        </tr>
+        <tr>
+            <td class="active"> FECHA NACIMIENTO</td>
+            <td class="info">{{seleccion.f_nacimiento |  date : format : shortDate}}</td>
+        </tr>
+        <tr >
+            <td class="active">TIPO DE SANGRE (RH)</td>
+            <td class="info">{{seleccion.rh }}</td>
+        </tr>
+        <tr >
+            <td class="active">TELEFONO</td>
+            <td class="info">{{seleccion.telefono}} </td>
+        </tr>
+        <tr>
+            <td class="active">CELULAR</td>
+            <td class="info">{{seleccion.celular}} </td>
+        </tr>
+        <tr>
+            <td class="active">PADRES</td>
+            <td class="info">{{seleccion.padres[0]}}</td>
+        </tr>
+        <tr>
+            <td class="active">LATITUD HOGAR</td>
+            <td class="info"> {{seleccion.latitud_hogar}} </td>
+        </tr>
+        <tr>
+            <td class="active">LONGITUD HOGAR</td>
+            <td class="info"> {{seleccion.longitud_hogar}} </td>
+        </tr>
+        <tr>
+            <td class="active">DIRECCIÓN</td>
+            <td class="info"> {{seleccion.direccion}} </td>
+        </tr>
+        <tr>
+            <td class="active"> CURSO</td>
+            <td class="info"> {{seleccion.grado_cursado}} {{seleccion.grupo_cursado}} </td>
+        </tr>       
+    </tbody>
+</table>
+<img ng-src="http://chart.apis.google.com/chart?cht=qr&chs=200x200&chl={{seleccion._id}}&chld=H|0"  alt="qr">
+</md-content>
+</div>
+<div class="md-actions" layout="row">
+  <span flex></span>
+  <md-button ng-click="respuesta (user)" class="md-primary"> Cerrar </md-button>
+  </div>
+</md-dialog>
+
+

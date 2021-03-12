@@ -1,0 +1,415 @@
+
+
+estudiante : [{
+	_id:"6874289",
+	padres:"15702251",
+	latitud_hogar:"8.7386492",
+	longitud_hogar:"-75.8714786",
+	grado_cursado:"4",
+	grupo_cursado:"A",
+	asignado:false,
+	estado : "inactivo",
+	"direccion": " Calle 27 #23e-10 / La pradera"
+	},
+	{
+	_id:"34975066",
+	padres:"1065001150",
+	latitud_hogar:"8.7386492",
+	longitud_hogar:"-75.8714786",
+	grado_cursado:"3",
+	grupo_cursado:"B",
+	asignado:false,
+	estado : "inactivo",
+	"direccion": "Calle 24 #23e-30 / La pradera"
+	},
+	{
+	_id:"1067858823",
+	padres:"50926495",
+	latitud_hogar:"8.7386492",
+	longitud_hogar:"-75.8714786",
+	grado_cursado:"5",
+	grupo_cursado:"B",
+	asignado:false,
+	estado : "inactivo",
+	"direccion": "Calle 22 #25-12"
+	},
+	{
+	_id:"91051030589",
+	padres:"943877",
+	latitud_hogar:"8.7386492",
+	longitud_hogar:"-75.8714786",
+	grado_cursado:"4",
+	grupo_cursado:"A",
+	asignado:false,
+	estado : "inactivo",
+	"direccion": "Carrera 26 #22-120"
+	},
+	{
+	_id:"1067943451",
+	padres:"39683335",
+	latitud_hogar:"8.7365764",
+	longitud_hogar:"-75.8726934",
+	grado_cursado:"4",
+	grupo_cursado:"A",
+	asignado:false,
+	estado : "inactivo",
+	"direccion": "Carrera 26 # 24-86"
+	}
+	];
+
+	db.estudiantes.save(estudiante);
+
+
+persona : [{
+	_id:"6874289",
+	primer_nombre:"Andres",
+	segundo_nombre:"Felipe",
+	primer_apellido:"Sierra",
+	segundo_apellido:"Jimenez",
+	f_nacimiento:"26/05/2011",
+	rh:"A+",
+	telefono:"000000",
+	celular:"0000000000",
+	foto:""
+	},
+	{
+	_id:"34975066",
+	primer_nombre:"Yuliana",
+	segundo_nombre:"",
+	primer_apellido:"Montiel",
+	segundo_apellido:"Vergara",
+	f_nacimiento:"25/05/2006",
+	rh:"B-",
+	telefono:"000000",
+	celular:"000000000",
+	foto:""
+	},
+	{
+	_id:"1067858823",
+	primer_nombre:"Yoselin",
+	segundo_nombre:"Maria",
+	primer_apellido:"Rodriguez",
+	segundo_apellido:"Perez",
+	f_nacimiento:"01/10/2008",
+	rh:"O+",
+	telefono:"000000",
+	celular:"000000",
+	foto:""
+	},
+	{
+	_id:"91051030589",
+	primer_nombre:"Ana",
+	segundo_nombre:"Elena",
+	primer_apellido:"Mendoza",
+	segundo_apellido:"Mercado",
+	f_nacimiento:"07/06/1993",
+	rh:"A+",
+	telefono:"7820014",
+	celular:"3145897823",
+	foto:""
+	},
+	{
+	_id:"1067943451",
+	primer_nombre:"Cristian",
+	segundo_nombre:"",
+	primer_apellido:"Leon",
+	segundo_apellido:"Mejia",
+	f_nacimiento:"09/05/1990",
+	rh:"B+",
+	telefono:"000000",
+	celular:"3215906245",
+	foto:""
+	},
+	{
+	_id:"15702251",
+	primer_nombre:"Miller",
+	segundo_nombre:"Antonio",
+	primer_apellido:"Sierra",
+	segundo_apellido:"Amador",
+	f_nacimiento:"11/09/1969",
+	rh:"B+",
+	telefono:"000000",
+	celular:"3153736754",
+	foto:""
+	},{
+	_id:"1065001150",
+	primer_nombre:"Jorge",
+	segundo_nombre:"Antonio",
+	primer_apellido:"Sierra",
+	segundo_apellido:"Jimenez",
+	f_nacimiento:"09/05/1990",
+	rh:"B+",
+	telefono:"000000",
+	celular:"3215906245",
+	foto:""
+	},
+	{
+	_id:"50926495",
+	primer_nombre:"Jose",
+	segundo_nombre:"Javier",
+	primer_apellido:"Garcia",
+	segundo_apellido:"Paternina",
+	f_nacimiento:"09/02/1994",
+	rh:"A+",
+	telefono:"000000",
+	celular:"3147080706",
+	foto:""
+	},
+	{
+	_id:"943877",
+	primer_nombre:"Gilberto",
+	segundo_nombre:"",
+	primer_apellido:"Vallejo",
+	segundo_apellido:"Echeverri",
+	f_nacimiento:"09/05/1990",
+	rh:"B+",
+	telefono:"000000",
+	celular:"3215906245",
+	foto:""
+	},
+
+	{
+	_id:"39683335",
+	primer_nombre:"Liliam",
+	segundo_nombre:"Cecilia",
+	primer_apellido:"Vallejo",
+	segundo_apellido:"Villalba",
+	f_nacimiento:"09/05/1990",
+	rh:"B+",
+	telefono:"7820037",
+	celular:"3215906245",
+	foto:""
+	},
+	{
+	_id:"1067900522",
+	primer_nombre:"Dagoberto",
+	segundo_nombre:"",
+	primer_apellido:"Berrocal",
+	segundo_apellido:"Muñoz",
+	f_nacimiento:"20/02/1950",
+	rh:"A+",
+	telefono:"7825698",
+	celular:"3162497164",
+	foto:""
+	},
+	{
+	_id:"1067900428",
+	primer_nombre:"Harold",
+	segundo_nombre:"",
+	primer_apellido:"Urango",
+	segundo_apellido:"Malo",
+	f_nacimiento:"03/11/1989",
+	rh:"O+",
+	telefono:"7821414",
+	celular:"3001234567",
+	foto:""
+	},
+	{
+	_id:"admin",
+	primer_nombre:"Jorge",
+	segundo_nombre:"Antonio",
+	primer_apellido:"Sierra",
+	segundo_apellido:"Jimenez",
+	f_nacimiento:"14/05/1993",
+	rh:"AB+",
+	telefono:"000000",
+	celular:"3004264603",
+	foto:""
+	}];
+
+db.personas.save(persona);
+
+usuario : [{
+	_id:"15702251",
+	clave:"12345",
+	tipousuario:"padre"
+	},
+	{
+	_id:"1065001150",
+	clave:"12345",
+	tipousuario:"padre"
+	},
+	{
+	_id:"50926495",
+	clave:"12345",
+	tipousuario:"padre"
+	},
+	{
+	_id:"943877",
+	clave:"12345",
+	tipousuario:"padre"
+	},
+	{
+	_id:"39683335",
+	clave:"12345",
+	tipousuario:"padre"
+	},
+	{
+	_id:"1067900522",
+	clave:"12345",
+	tipousuario:"conductor"
+	},
+	{
+	_id:"1067900428",
+	clave:"12345",
+	tipousuario:"conductor"
+	},
+	{
+	_id:"admin",
+	clave:"admin",
+	tipousuario:"administrador"
+	}
+	];
+
+db.usuarios.save(usuario);
+
+	padre : [{
+		_id:"15702251",
+		ocupacion:"Comerciante",
+		direccion_trabajo:"Cra 2 #29-46",
+		telefono_trabajo:"7820037",
+		email:"persona5@hotmail.com"
+		}, 
+		{
+		_id:"1065001150",
+		ocupacion:"Ganadero",
+		direccion_trabajo:"Cra 8 #19-06",
+		telefono_trabajo:"7821407",
+		email:"persona6@hotmail.com"
+		}, 
+		{
+		_id:"50926495",
+		ocupacion:"Patrullero",
+		direccion_trabajo:"Carrera 14A #13-30/Cai Av. Granada",
+		telefono_trabajo:"7821452",
+		email:"persona7@hotmail.com"
+		},
+		{
+		_id:"943877",
+		ocupacion:"Comerciante",
+		direccion_trabajo:"Carrera 6 #40-2",
+		telefono_trabajo:"7821452",
+		email:"persona7@hotmail.com"
+		},
+		{
+		_id:"39683335",
+		ocupacion:"Ingeniero",
+		direccion_trabajo:"Carrera 22 #22c-1",
+		telefono_trabajo:"7821452",
+		email:"persona7@hotmail.com"
+		}];
+
+	db.padres.save(padre);
+
+
+
+conductor : [{
+	_id: "1067900522",
+	numero_licencia:"12345678-3",
+	f_expedicion_doc:"10/05/2009",
+	f_vencimiento_doc:"09/05/2050",
+	organismo_expedidor:"TYT Lorica",
+	asignado:"false"
+	},
+	{
+	_id: "1067900428",
+	numero_licencia:"12345678-4",
+	f_expedicion_doc:"05/05/1990",
+	f_vencimiento_doc:"04/05/2040",
+	organismo_expedidor:"TYT Cerete",
+	asignado:"false"
+	}];
+db.conductors.save(conductor);
+
+vehiculo = [{
+	_id: "AHP-93C",
+	licencia_transito : "123456789",
+	linea : "",
+	modelo : "",
+	cilindrada: "",
+	color : "",   
+	servicio : "",
+	clase_vehiculo : "",
+	tipo : "",
+	combustible : "",
+	pasajeros : "",
+	numero_motor : "",
+	vn : "",
+	numero_chasis :"",
+	propietario : "",
+	identificacion : "",
+
+	numero_soat : "",
+	aseguradora : "",
+	f_expedicion_soat : "",
+	f_vencimiento_soat : "",
+	cod_sucursal : "",
+	clave_producto : "",
+	ciudad_expedicion : "",
+
+	numero_control : "",
+	centro_diagnostico : "",
+	nit : "",
+	f_expedicion_certificado : "",
+	f_vencimiento_certificado : "",
+	consecutivo_runt : ""
+	},
+	{
+	_id: "TYD-84D",
+	licencia_transito : "123456789",
+	linea : "enduro",
+	modelo : "2016",
+	cilindrada: "124cc",
+	color : "negro",   
+	servicio : "particular",
+	clase_vehiculo : "motocicleta",
+	tipo : "",
+	combustible : "gasolina",
+	pasajeros : "10",
+	numero_motor : "xxxxxxxxxxxxxx",
+	vn : "xxxxxxxxxxxxxx",
+	numero_chasis :"xxxxxxxxxxxxxx",
+	propietario : "Jorge Sierra Jimenez",
+	identificacion : "1065001150",
+
+	numero_soat : "xxxxxxxxxxxxxx",
+	aseguradora : "Liberty",
+	f_expedicion_soat : "11/05/2015",
+	f_vencimiento_soat : "10/05/2016",
+	cod_sucursal : "091",
+	clave_producto : "1234",
+	ciudad_expedicion : "Montería",
+
+	numero_control : "12345",
+	centro_diagnostico : "Diagnosticar S.A",
+	nit : "820.114.256-8",
+	f_expedicion_certificado : "11/05/2015",
+	f_vencimiento_certificado : "10/05/2016",
+	consecutivo_runt : "123",
+	foto:"/images/avatar.jpg"
+	}
+	];
+
+	db.vehiculos.save(vehiculo);
+
+	listapasajero = [{
+	_id:"AHP-93C",
+	id_vehiculo :"AHP-93C",
+	id_conductor : "1067900522",
+	estudiantes : ["6874289","34975066","1067858823"],
+	latitud_vehiculo: "8.741372",
+	longitud_vehiculo : "-75.870685",
+	estado :"inactivo"
+	},
+	{
+	_id:"TYD-84D",
+	id_vehiculo :"TYD-84D",
+	id_conductor : "1067900428",
+	estudiantes : ["91051030589","1067943451"],
+	latitud_vehiculo: "8.741372",
+	longitud_vehiculo : "-75.870685",
+	estado :"inactivo"
+	}
+	];
+	db.listapasajeros.save(listapasajero);
+	

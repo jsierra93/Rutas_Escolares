@@ -1,0 +1,17 @@
+<ion-view view-title="Reporte">
+  <ion-content>
+    <div class="row">
+  <div class="col"></div>
+  <div class="col col-50">
+  <label>Reporte de Falla o Daño</label>
+  <textarea placeholder="Descripción de la falla / Daño" rows="10" cols="10" id="textarea-reporte" ng-model="TReporte">
+	</textarea>
+	<div id="botonesReporte">
+	<button class="button icon-right ion-android-cancel" ng-click="CancelarReporte()">Cancelar</button>
+	<button class="button icon-right ion-android-send" ng-click="EnviarReporte(TReporte)">Enviar</button>	
+	</div>
+	</div>
+  <div class="col"></div>
+</div>
+  </ion-content>
+</ion-view>

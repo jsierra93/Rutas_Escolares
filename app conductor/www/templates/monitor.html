@@ -1,0 +1,48 @@
+<ion-view view-title="Monitor">
+  <ion-content>
+  <div id="ContenedorMonitor" class="row">
+ 
+ 	<div id="map"  data-tap-disabled="true" ng-init="IniciarMapa()">
+ 	
+	</div>
+	
+	<div id="Pasajeros"> 
+
+		<ion-scroll zooming="false" direction="y" style="height:220px; width:200px;">
+		<div id="Lista" class="list" overflow-scroll="true">
+			<div class="item item-divider">
+			     Activos 
+			    <img  class="icon-pasajeros" src='http://130.211.180.114/images/home-verde.png'>
+			</div>
+
+			<div ng-repeat="p in Pasajeros | filter: 'activo':true" class="item item-button-left">
+			    <h2>{{ p.primer_nombre }} {{p.primer_apellido}}</h2>
+			    <p>{{p._id}} </p>
+			    <a ng-click='CambiarEstado("inactivo", p)'class="button button-icon icon ion-minus-round"></a>
+			    
+		  	</div>
+
+			<div class="item item-divider">
+			     Inactivos
+			    <img class="icon-pasajeros" src='http://130.211.180.114/images/home-azul.png'>
+			</div>
+
+			<div ng-repeat="p in Pasajeros | filter: 'inactivo':true" class="item item-button-left">
+		   		<h2>{{ p.primer_nombre }} {{p.primer_apellido}} </h2>
+		      	<p>{{p._id}} </p>
+			    
+			    <a ng-click='CambiarEstado("activo", p)'class="button button-icon icon ion-plus"></a>
+	  		</div>
+		</div>
+		</ion-scroll>
+
+		<div id="BotonesMapa">
+			<button class="button icon-left ion-camera " ng-click="EscanearId()"> Escanear</button>
+		<button class="button icon-left ion-android-hand" ng-click="FinalizarRecorrido()"> Finalizar</button>
+		</div>
+		
+	</div>
+  </div>
+	
+  </ion-content>
+</ion-view>

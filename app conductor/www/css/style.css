@@ -1,0 +1,148 @@
+/* Empty. Add your own CSS if you like */
+.scroll {
+	 height: 100%;
+	 width: 100%;
+}
+
+@media screen and (max-width:700px){
+   article{
+      width:100%;
+   }
+}
+
+#btnInicio {
+	margin-top: 20%;
+	margin-left: 35%;
+
+}
+
+#map {
+   border-radius: 5px;
+    height: 100%;
+    width: 80%;
+}
+
+#ContenedorMonitor {
+	height: 100%;
+	width: 100%;
+	
+}
+
+#Pasajeros{
+	display: table;
+	height: 200px;
+	width: 200px;
+	
+}
+
+#CuerpoLista > md-toolbar{
+	height: 30px;
+	max-height: 30px;
+}
+
+.tablaRutas{
+	width: 800px;
+	margin-left: 10%;
+	border: 1px solid black;
+}
+
+/* Cambiar ancho y alto de scrool para 
+pantallas grandes */
+
+#Lista{
+	width: 220px;
+	margin: 0;
+}
+
+#BotonesMapa{
+	width: 210px;
+	height:10%; 
+}
+
+
+#BotonesMapa button {
+	height: auto;
+	width: 95px;
+	font-size: 10pt;
+	margin: 4px;
+	margin-right: 0;
+	padding: 0;
+}
+
+
+
+.tabla {
+	height: auto;
+	width: 40%;
+	margin-left: 25%;
+	}
+
+.tfila{
+	background: rgba(0,0,0,0.3);
+}
+
+.ctabla {
+	text-align: center;
+	padding: 3px;
+
+}
+
+.dtabla{
+	font-size: 1.2em;
+	font-weight: bold;
+	}
+
+.item-image img:first-child, .item-image .list-img {
+    width: 300px;
+    height: 200px;
+    vertical-align: middle;
+}
+
+$assertive :#ef473a;
+
+.button-float{
+  background: $assertive !important;
+  color:red !important;
+  z-index: 12 !important;
+  position: absolute !important; 
+  bottom: 10px !important;
+  right: 10px !important;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+  -webkit-transition: 0.2s linear !important;
+  transition: 0.2s linear !important;
+  -webkit-transition-property: -webkit-transform, all !important;
+  transition-property: transform, all !important;
+
+}
+
+.button-float:hover{
+  -webkit-transform: translate3d(0, -1px, 0)  !important;
+  transform: translate3d(0, -1px, 0) !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4) !important;
+    background: darken($assertive, 10%) !important;
+}
+
+.icon-pasajeros {
+	height: 20px;
+	width: 20px;
+	float: center;
+	margin-left: 10px;
+	padding: 0;
+}
+
+#textarea-reporte{
+	height: 90%;
+	padding: 10px;
+	width: 100%;
+	border: 1px solid grey;
+	border-radius: 10px;
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4) !important;
+}
+
+#botonesReporte{
+	margin-top: 10px;
+	text-align: center;
+}

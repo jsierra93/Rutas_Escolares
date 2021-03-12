@@ -1,0 +1,23 @@
+<md-dialog aria-label="Adjuntar Documentos" id="CuerpoModal">
+  <div layout="column">
+  <md-content >
+<form enctype="multipart/form-data" class="formoid-solid-blue" style="background-color:#FFFFFF;font-size:14px;font-family:'Roboto',Arial,Helvetica,sans-serif;color:#34495E;min-width:100%;max-width:300px; text-align:left;" method="post" action="http://localhost:8080/subirAdjuntoVehiculos">
+<label class="title center">Adjuntar Documentos</label>
+	<input type="text" name="id" value="{{seleccion._id}}" hidden>
+   <div class="element-file"><label class="title">Tarjeta de Propiedad</label><div class="item-cont"><label class="large" ><input type="file" class="file_input" name="file" required/><div class="file_text">Seleccione archivo</div><span class="icon-place"></span></label></div></div>
+    <div class="element-file"><label class="title">SOAT</label><div class="item-cont"><label class="large" ><input type="file" class="file_input" name="file1" required/><div class="file_text">Seleccione archivo</div><span class="icon-place"></span></label></div></div>
+    <div class="element-file"><label class="title">Certificado de tecnico mecanico</label><div class="item-cont"><label class="large" ><input type="file" class="file_input" name="file2"required /><div class="file_text">Seleccione archivo</div><span class="icon-place"></span></label></div></div>
+
+<div class="submit">
+<input type="submit" class="button" value="Cargar"/>
+</div>
+</form>
+  </md-content>
+</div>
+<div class="md-actions" layout="row">
+  <span flex></span>
+  <md-button ng-click="respuesta ('cancelar')" class="md-primary"> Cancelar </md-button>
+  </div>
+</md-dialog>
+
+

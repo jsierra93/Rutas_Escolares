@@ -1,0 +1,150 @@
+<ion-view view-title="MI vehiculo">
+  <ion-content>
+  <div class="item item-image">
+    <img class="fvehiculo" src='{{Dvehiculo.foto}}'>
+  </div>
+    <a class="item" href="#">
+    <div class="item item-divider text-center ">
+    Información Basica
+  </div>
+<table class="tabla">
+<tbody>
+<tr class="tfila">
+	<td class="ctabla">IDENTIFICACION</td>
+	<td class="dtabla">{{Dvehiculo._id}}</td>
+</tr>
+<tr>
+	<td td class="ctabla">LICENCIA DE TRANSITO</td>
+	<td  class="dtabla">{{Dvehiculo.licencia_transito}}</td>
+</tr>
+<tr class="tfila">
+	<td class="ctabla">LINEA </td>
+	<td class="dtabla">{{Dvehiculo.linea}}</td>
+</tr>
+<tr>
+	<td class="ctabla">MODELO</td>
+	<td  class="dtabla">{{Dvehiculo.modelo}}</td>
+</tr>
+<tr class="tfila">
+	<td class="ctabla">CILINDRADA </td>
+	<td  class="dtabla">{{Dvehiculo.cilindrada}}</td>
+</tr>
+<tr>
+	<td class="ctabla">COLOR</td>
+	<td class="dtabla">{{Dvehiculo.color}}</td>
+</tr>
+<tr class="tfila">
+	<td class="ctabla">SERVICIO </td>
+	<td  class="dtabla">{{Dvehiculo.servicio}}</td>
+</tr>
+<tr>
+	<td class="ctabla">CLASE VEHICULO</td>
+	<td class="dtabla">{{Dvehiculo.clase_vehiculo}}</td>
+</tr>
+<tr class="tfila">
+	<td class="ctabla">TIPO</td>
+	<td class="dtabla">{{Dvehiculo.tipo}}</td>
+</tr>
+<tr>
+	<td class="ctabla">COMBUSTIBLE</td>
+	<td class="dtabla">{{Dvehiculo.combustible}}</td>
+</tr>
+<tr class="tfila">
+	<td class="ctabla">PASAJEROS</td>
+	<td class="dtabla">{{Dvehiculo.pasajeros}}</td>
+</tr>
+<tr>
+	<td class="ctabla">N° MOTOR</td>
+	<td class="dtabla">{{Dvehiculo.numero_motor}}</td>
+</tr>
+<tr class="tfila">
+	<td class="ctabla">VN</td>
+	<td class="dtabla">{{Dvehiculo.vn}}</td>
+</tr>
+<tr>
+	<td class="ctabla">N° CHASIS</td>
+	<td class="dtabla">{{Dvehiculo.numero_chasis}}</td>
+</tr>
+<tr class="tfila">
+	<td class="ctabla">PROPIETARIO</td>
+	<td class="dtabla">{{Dvehiculo.propietario}}</td>
+</tr>
+<tr>
+	<td class="ctabla">IDENTIFICACIÓN</td>
+	<td class="dtabla">{{Dvehiculo.identificacion}}</td>
+</tr>
+</tbody>
+</table>
+</a>
+<a class="item" href="">
+  <div class="item item-divider text-center">
+    SOAT
+  </div>
+<table class="tabla">
+<tbody>
+<tr class="tfila">
+	<td class="ctabla">N° SOAT</td>
+	<td class="dtabla">{{Dvehiculo.numero_soat}}</td>
+</tr>
+<tr>
+	<td td class="ctabla">ASEGURADORA</td>
+	<td  class="dtabla">{{Dvehiculo.aseguradora}}</td>
+</tr>
+<tr class="tfila">
+	<td class="ctabla">F. EXPEDICIÓN </td>
+	<td class="dtabla">{{Dvehiculo.f_expedicion_soat  |  date : format : shortDate}}</td>
+</tr>
+<tr>
+	<td class="ctabla">F. VENCIMIENTO</td>
+	<td  class="dtabla">{{Dvehiculo.f_vencimiento_soat  |  date : format : shortDate}}</td>
+</tr>
+<tr class="tfila">
+	<td class="ctabla">CODIGO SUCURSAL </td>
+	<td  class="dtabla">{{Dvehiculo.cod_sucursal}}</td>
+</tr>
+<tr>
+	<td class="ctabla">CLAVE PRODUCTO</td>
+	<td class="dtabla">{{Dvehiculo.clave_producto}}</td>
+</tr>
+<tr class="tfila">
+	<td class="ctabla">CIUDAD EXPEDICIÓN </td>
+	<td  class="dtabla">{{Dvehiculo.ciudad_expedicion}}</td>
+</tr>
+</tbody>
+</table>
+</a>
+<a class="item" href="">
+<div class="item item-divider text-center">
+    CERTIFICADO TECNICO-MECANICO
+  </div>
+<table class="tabla">
+<tbody>
+<tr class="tfila">
+	<td class="ctabla">N° CONTROL</td>
+	<td class="dtabla">{{Dvehiculo.numero_control}}</td>
+</tr>
+<tr>
+	<td td class="ctabla">CENTRO DIAGNOSTICO</td>
+	<td  class="dtabla">{{Dvehiculo.centro_diagnostico}}</td>
+</tr>
+<tr class="tfila">
+	<td class="ctabla">NIT </td>
+	<td class="dtabla">{{Dvehiculo.nit}}</td>
+</tr>
+<tr>
+	<td class="ctabla">F. EXPEDICIÓN</td>
+	<td  class="dtabla">{{Dvehiculo.f_expedicion_certificado  |  date : format : shortDate}}</td>
+</tr>
+<tr class="tfila">
+	<td class="ctabla">F. VENCIMIENTO</td>
+	<td  class="dtabla">{{Dvehiculo.f_vencimiento_certificado  |  date : format : shortDate}}</td>
+</tr>
+<tr>
+	<td class="ctabla">CONSECUTIVO RUNT </td>
+	<td  class="dtabla">{{Dvehiculo.consecutivo_runt}}</td>
+</tr>
+</tbody>
+</table>
+</a>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,56 @@
+<div id="ContenedorRutas">
+<div id="map" flex="80">
+		
+	</div>
+  <div id="ListaRutas" flex="20">
+	<div id="CabeceraLista">	
+<h3 class="center">
+         Rutas Activas
+    <md-button ng-click="ActulizarMapa()" class="md-icon-button" aria-label="Actualizar">
+          <md-icon md-svg-icon="images/refresh55.svg" ></md-icon>
+          <md-tooltip md-visible="demo1.showTooltip">
+             Actualizar
+              </md-tooltip>
+         </md-button> </h3>
+	</div>
+ <div id="CuerpoLista">
+ <md-toolbar >
+    <div class="md-toolbar-tools">
+        <span>Activas</span>
+    </div>
+  </md-toolbar>
+  <ul ng-repeat="Pasajero in listaP | filter: 'activo':true" >
+    <li>
+       <a href="#" ng-click="CargarMarcadores($event, Pasajero)">
+      <h3 class="center">{{ Pasajero.id_vehiculo }}
+      <img ng-src="images/bus-verde.png" class="md-avatar right" alt="{{Pasajero.id_vehiculo}}" />
+      </h3>
+      </a> 
+      <md-divider ></md-divider> 
+    </li>
+
+  </ul>
+   <md-divider ></md-divider> 
+       <!-- <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.id_vehiculo}}</a> -->
+   <md-toolbar >
+    <div class="md-toolbar-tools">
+      
+        <span>Inactivas</span>
+
+    </div>
+  </md-toolbar>
+  <ul ng-repeat="Pasajero in listaP | filter: 'inactivo':true" >
+    <li>
+       <a href="#" ng-click="CargarMarcadores($event, Pasajero)">
+      <h3 class="center">{{ Pasajero.id_vehiculo }}
+      <img ng-src="images/bus-azul.png" class="md-avatar right" alt="{{Pasajero.id_vehiculo}}" />
+      </h3>
+      </a> 
+      <md-divider ></md-divider> 
+    </li>
+   
+  </ul>
+ </div>
+ </div>
+ </div>
+</div>
